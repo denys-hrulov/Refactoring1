@@ -70,7 +70,7 @@ public class Customer {
         Enumeration rentals = _rentals.elements();
         while (rentals.hasMoreElements()) {
             Rental each = (Rental) rentals.nextElement();
-            result += each.getDaysRented();
+            result += each.getFrequentRenterPoints();
         }
         return result;
     }
