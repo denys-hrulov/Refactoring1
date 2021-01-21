@@ -20,8 +20,6 @@ public class Customer {
     }
 
     public String statement() {
-        double totalAmount = 0;
-        int frequentRenterPoints = 0;
         Enumeration rentals = _rentals.elements();
         String result = "Rental record for " + getName() + "\n";
         while (rentals.hasMoreElements()) {
@@ -31,7 +29,6 @@ public class Customer {
             // add bonus for a two day new release rental
             // show figures for this rental
             result += "\t" + each.getMovie().getTitle() + "\t" + each.getCharge() + "\n";
-            totalAmount += each.getCharge();
         }
         // add footer lines
         result += "Amount owned is " + getTotalCharge() + "\n";
